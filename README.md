@@ -1,4 +1,4 @@
-# Sai Ammiraju · Mechanical Engineer
+# Sai Phanidhar Ammiraju · Mechanical Engineer
 
 Portfolio website: **https://saiphani02.github.io**
 
