@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Frisbee aerodynamics and 6-DOF flight · Sai Ammiraju</title>
+<meta name="description" content="Why a frisbee flies furthest when thrown almost flat.">
+<meta property="og:title" content="Frisbee aerodynamics and 6-DOF flight · Sai Ammiraju">
+<meta property="og:description" content="Why a frisbee flies furthest when thrown almost flat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0b0f'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='17' text-anchor='middle' fill='%23f2c94c'%3ESA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Sai <b>Ammiraju</b></a>
+  <ul><li><a href="index.html#services">What I do</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#skills">Skills</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#experience">Experience</a></li><li><a href="index.html#education">Education</a></li></ul>
+  <a class="btn gold sm" href="index.html#contact">Contact</a>
+</div></nav>
+
+<header class="phead"><div class="wrap">
+  <a class="back" href="index.html#projects">← All projects</a>
+  <h1>Frisbee aerodynamics and 6-DOF flight</h1>
+  <p class="hook">Why a frisbee flies furthest when thrown almost flat.</p>
+  <div class="meta"><span>CFD · Flight dynamics</span><span>Spring 2026</span><span class="role">Team lead, 4-person course project</span></div>
+  <div class="tags" style="margin-top:16px"><span>ANSYS Fluent</span><span>SolidWorks Flow Sim</span><span>MATLAB</span><span>Simulink</span><span>Python</span><span>6-DOF dynamics</span></div>
+  <div class="kpis"><div class="kpi"><div class="n">~4.5°</div><div class="l">best launch angle</div></div><div class="kpi"><div class="n">23.4 m</div><div class="l">range at 20 m/s</div></div><div class="kpi"><div class="n">3.4</div><div class="l">peak lift-to-drag</div></div></div>
+  
+</div></header>
+<section class="alt"><div class="wrap">
+  <div class="whr">
+    <div><h3>What</h3><p>Work out why a disc flies furthest when it is thrown almost flat, for the Flight Dynamics course at FAU.</p></div>
+    <div><h3>How</h3><p>Lift and drag from ANSYS Fluent (k-ω SST, −10° to +30°), cross-checked in SolidWorks Flow Simulation. A 10-state 6-DOF model with gyroscopic spin coupling in MATLAB/Simulink (ode45) and Python.</p></div>
+    <div><h3>Results</h3><p>Best launch angle is about 4 to 5 degrees, giving 23.4 m at 20 m/s and 600 RPM. A 40° throw only reaches about 14 m. Raising spin from 250 to 1000 RPM takes range from about 9 m to 34 m.</p></div>
+  </div>
+  
+  <div class="checks"><div>Fluent coefficients cross-checked in SolidWorks Flow Simulation</div><div>6-DOF model rewritten in Python as a second check</div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Process</span>
+  <h2 class="sec">From model to result</h2>
+  <div class="process"><figure class=""><div class="fr"><img src="frisbee_3d.png" alt="6-DOF trajectories for ±10° lateral release" loading="lazy"></div><figcaption><b>1 · Model</b>6-DOF trajectories for ±10° lateral release</figcaption></figure><figure class=""><div class="fr"><img src="frisbee_spin.png" alt="Effect of spin rate on range" loading="lazy"></div><figcaption><b>2 · Study</b>Effect of spin rate on range</figcaption></figure><figure class="wide"><div class="fr"><img src="frisbee_angle.png" alt="Range vs launch angle: the peak sits near 4 to 5°" loading="lazy"></div><figcaption><b>3 · Result</b>Range vs launch angle: the peak sits near 4 to 5°</figcaption></figure></div>
+  <div class="cta" style="margin-top:34px"><a class="btn gold" href="https://github.com/Saiphani02/frisbee-flight-dynamics" target="_blank" rel="noopener">MATLAB, Simulink and Python model on GitHub →</a><a class="btn" href="index.html#projects">← Back to projects</a></div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Sai Ammiraju · Mechanical Engineer</span><span>Delray Beach, FL · Open to relocate</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ladder-frame chassis: steel vs titanium · Sai Ammiraju</title>
+<meta name="description" content="77% lighter, or 1% lighter: it depends on what limits the frame.">
+<meta property="og:title" content="Ladder-frame chassis: steel vs titanium · Sai Ammiraju">
+<meta property="og:description" content="77% lighter, or 1% lighter: it depends on what limits the frame.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0b0f'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='17' text-anchor='middle' fill='%23f2c94c'%3ESA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Sai <b>Ammiraju</b></a>
+  <ul><li><a href="index.html#services">What I do</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#skills">Skills</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#experience">Experience</a></li><li><a href="index.html#education">Education</a></li></ul>
+  <a class="btn gold sm" href="index.html#contact">Contact</a>
+</div></nav>
+
+<header class="phead"><div class="wrap">
+  <a class="back" href="index.html#projects">← All projects</a>
+  <h1>Ladder-frame chassis: steel vs titanium</h1>
+  <p class="hook">77% lighter, or 1% lighter: it depends on what limits the frame.</p>
+  <div class="meta"><span>FEA · Structures</span><span>Nov 2026</span><span class="role">Self-directed study, AI-assisted</span></div>
+  <div class="tags" style="margin-top:16px"><span>FreeCAD (parametric CAD)</span><span>ANSYS Mechanical</span><span>Shell FEA</span><span>Buckling analysis</span><span>Hand calcs</span><span>Python</span></div>
+  <div class="kpis"><div class="kpi"><div class="n">77%</div><div class="l">lighter at equal strength</div></div><div class="kpi"><div class="n">1%</div><div class="l">lighter at equal stiffness</div></div><div class="kpi"><div class="n">3–4%</div><div class="l">FEA vs hand calcs</div></div></div>
+  <div class="pvideo"><video controls muted playsinline preload="metadata" poster="chassis_video_poster.jpg"><source src="chassis.mp4" type="video/mp4"></video></div>
+</div></header>
+<section class="alt"><div class="wrap">
+  <div class="whr">
+    <div><h3>What</h3><p>Compare S355 steel and Ti-6Al-4V for a 4.2 m truck ladder frame, and find out how much weight titanium really saves.</p></div>
+    <div><h3>How</h3><p>Parametric CAD in FreeCAD driven by a spreadsheet. Quadratic shell mesh (about 72,000 nodes) in ANSYS Mechanical under a 2.5 g bump, a 1 g diagonal wheel lift and eigenvalue buckling. Four wall thicknesses, checked against hand beam calcs.</p></div>
+    <div><h3>Results</h3><p>At equal strength titanium is 77% lighter (174 kg to 39 kg). At equal stiffness it saves only 1% (172 kg), because its modulus is 57% of steel&#x27;s. The thin frame also sags 4.6 times more. FEA matched hand calcs within 3 to 4%.</p></div>
+  </div>
+  <div class="tbl"><table><thead><tr><th>Design</th><th>Walls</th><th>Mass</th><th>Worst-case SF</th><th>Bump sag</th></tr></thead><tbody><tr><td>Steel S355</td><td>5 mm</td><td>174 kg</td><td>3.4</td><td>4.5 mm</td></tr><tr><td>Ti-6Al-4V</td><td>2 mm</td><td>39 kg</td><td>3.1</td><td>20.7 mm</td></tr><tr><td>Ti-6Al-4V</td><td>3 mm</td><td>59 kg</td><td>5.1</td><td>13.2 mm</td></tr><tr><td>Ti-6Al-4V</td><td>8.8 mm</td><td>172 kg</td><td>17</td><td>4.5 mm</td></tr></tbody></table></div>
+  <div class="checks"><div>Hand beam calcs within 3–4% of ANSYS</div><div>Support reactions balance the applied loads</div><div>Finer mesh gives the same stress away from the joints</div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Process</span>
+  <h2 class="sec">From model to result</h2>
+  <div class="process"><figure class=""><div class="fr"><img src="chassis_drawing.png" alt="A3 drawing CH-001, 4200 × 800 mm, RHS 150×60×5 rails" loading="lazy"></div><figcaption><b>1 · CAD</b>A3 drawing CH-001, 4200 × 800 mm, RHS 150×60×5 rails</figcaption></figure><figure class=""><div class="fr"><img src="chassis_ti_bump.jpg" alt="2 mm Ti frame, 2.5 g bump: 20.7 mm max deformation" loading="lazy"></div><figcaption><b>2 · Analysis</b>2 mm Ti frame, 2.5 g bump: 20.7 mm max deformation</figcaption></figure><figure class="wide"><div class="fr"><img src="chassis_comparison.png" alt="Mass, bump sag and twist for steel vs three Ti thicknesses" loading="lazy"></div><figcaption><b>3 · Result</b>Mass, bump sag and twist for steel vs three Ti thicknesses</figcaption></figure></div>
+  <div class="cta" style="margin-top:34px"><a class="btn gold" href="https://github.com/Saiphani02/chassis-fea-steel-vs-titanium" target="_blank" rel="noopener">CAD, STEP, drawing, ANSYS project and scripts on GitHub →</a><a class="btn" href="index.html#projects">← Back to projects</a></div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Sai Ammiraju · Mechanical Engineer</span><span>Delray Beach, FL · Open to relocate</span></div></footer>
+</body>
+</html>
