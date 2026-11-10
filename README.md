@@ -2,7 +2,7 @@
 
 Portfolio website: **https://saiphani02.github.io**
 
-M.S. Mechanical Engineering, Florida Atlantic University (Dec 2026). FEA, CFD, vehicle dynamics, control and robotics.
+M.S. Mechanical Engineering, Florida Atlantic University (Dec 2026). FEA, CFD, vehicle dynamics, control and robotics. Open to full-time roles from January 2027.
 
 | Project | Tools |
 |---|---|
