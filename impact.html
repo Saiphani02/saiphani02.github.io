@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Epoxy block under impact: 0° vs 45° · Sai Phanidhar Ammiraju</title>
+<meta name="description" content="Same block, same speed, only the direction changes. The angled hit deforms the epoxy 2.3 times more than the head-on one.">
+<meta property="og:title" content="Epoxy block under impact: 0° vs 45° · Sai Phanidhar Ammiraju">
+<meta property="og:description" content="Same block, same speed, only the direction changes. The angled hit deforms the epoxy 2.3 times more than the head-on one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0b0f'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='17' text-anchor='middle' fill='%23f2c94c'%3ESA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Sai Phanidhar <b>Ammiraju</b></a>
+  <ul><li><a href="index.html#services">What I do</a></li><li><a href="index.html#projects">Projects</a></li><li><a href="index.html#skills">Skills</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#experience">Experience</a></li><li><a href="index.html#education">Education</a></li></ul>
+
+  <a class="btn gold sm" href="index.html#contact">Contact</a>
+</div></nav>
+
+<header class="phead"><div class="wrap">
+  <a class="back" href="index.html#projects">← All projects</a>
+  <h1>Epoxy block under impact: 0° vs 45°</h1>
+  <p class="hook">Same block, same speed, only the direction changes. The angled hit deforms the epoxy 2.3 times more than the head-on one.</p>
+  <div class="meta"><span>FEA · Explicit dynamics</span><span>2024 · rebuilt Nov 2026</span><span class="role">Course project (team of 2), rebuilt with AI assistance</span></div>
+  <div class="tags" style="margin-top:16px"><span>ANSYS Explicit Dynamics</span><span>ANSYS Mechanical</span><span>Wave mechanics</span><span>Polymer composites</span></div>
+  <div class="kpis"><div class="kpi"><div class="n">2.3×</div><div class="l">more deformation at 45°</div></div><div class="kpi"><div class="n">0.30 mm</div><div class="l">peak deformation, 45°</div></div><div class="kpi"><div class="n">10 ms</div><div class="l">event, 3,150 explicit cycles</div></div></div>
+  <div class="pvideo"><span class="eyebrow" style="display:block;margin-bottom:10px">Screen recording · setup and solve in Ansys Mechanical</span><video controls muted playsinline preload="metadata" poster="impact_poster.jpg"><source src="impact.mp4" type="video/mp4"></video></div>
+</div></header>
+<section class="alt"><div class="wrap">
+  <div class="whr">
+    <div><h3>What</h3><p>See how the direction of a sudden load changes the response of an epoxy block. This was the first stage of a course study on self-healing polymer composites: before adding any healing agent, find out how the plain matrix reacts to a hit.</p></div>
+    <div><h3>How</h3><p>A 200 mm epoxy block (E = 3 GPa, ν = 0.35, ρ = 1200 kg/m³) is clamped at its base and given a 1.41 m/s initial velocity, either straight along its height (0°) or at 45°, as (1, 1, 0) m/s. ANSYS Explicit Dynamics follows the stress waves for 10 ms on a 10 mm hex mesh (8,000 elements). The original 2024 setup was rebuilt by hand in Mechanical 2026 R1.</p></div>
+    <div><h3>Results</h3><p>Head-on, the block peaks at 0.13 mm. At 45° it reaches 0.30 mm and the stress rises from 4.7 to 7.4 MPa, highest at the clamped base. The angled hit has a sideways part that shears the block, and shear waves in epoxy travel at about half the speed of compression waves, so the block moves further before it stops.</p></div>
+  </div>
+  <div class="tbl"><table><thead><tr><th>Case</th><th>Initial velocity</th><th>Peak deformation</th><th>Peak von Mises stress</th><th>Hand check</th></tr></thead><tbody><tr><td>0° (head-on)</td><td>(0, 1.41, 0) m/s</td><td>0.13 mm</td><td>4.7 MPa</td><td>0.14 mm</td></tr><tr><td>45°</td><td>(1, 1, 0) m/s</td><td>0.30 mm</td><td>7.4 MPa</td><td>about 0.23 mm</td></tr></tbody></table></div>
+  <div class="checks"><div>Head-on deformation matches v·L/c = 0.14 mm (compression wave, c = 2,003 m/s)</div><div>45° hand estimate adds shear (c = 962 m/s): about 0.23 mm, same direction and size as the FEA</div><div>Linear hex elements, as Explicit Dynamics requires</div></div>
+</div></section>
+<section><div class="wrap">
+  <span class="eyebrow">Process</span>
+  <h2 class="sec">From model to result</h2>
+  <div class="process"><figure class=""><div class="fr"><img src="impact_mesh.jpg" alt="10 mm hex mesh of the 200 mm epoxy block" loading="lazy"></div><figcaption><b>1 · Mesh</b>10 mm linear hex, 20 × 20 × 20</figcaption></figure><figure class=""><div class="fr"><img src="impact_def0.jpg" alt="Total deformation at 10 ms, 0 degree case" loading="lazy"></div><figcaption><b>2 · 0° deformation</b>Uniform bands up the height: a compression wave</figcaption></figure><figure class="wide"><div class="fr"><img src="impact_def45.jpg" alt="Total deformation at 10 ms, 45 degree case" loading="lazy"></div><figcaption><b>3 · 45° deformation</b>The top corner swings sideways: the block shears</figcaption></figure><figure class=""><div class="fr"><img src="impact_vm0.jpg" alt="Von Mises stress at 10 ms, 0 degree case" loading="lazy"></div><figcaption><b>4 · 0° stress</b>Highest near the clamped base</figcaption></figure><figure class=""><div class="fr"><img src="impact_vm45.jpg" alt="Von Mises stress at 10 ms, 45 degree case" loading="lazy"></div><figcaption><b>5 · 45° stress</b>Peaks at the base edge, where shear is held</figcaption></figure></div>
+  <p class="lead" style="margin-top:22px;font-size:14px">Contour images are at the end of the run (10 ms). Table values are peaks over the whole 10 ms. Next step from the original study: a projectile hitting a thin composite panel, with healing capsules in the matrix.</p>
+  <div class="cta" style="margin-top:34px"><a class="btn gold" href="https://github.com/Saiphani02/epoxy-block-impact-explicit" target="_blank" rel="noopener">Model and files on GitHub ↗</a><a class="btn" href="index.html#projects">← Back to projects</a></div>
+</div></section>
+<footer><div class="wrap"><span>© 2026 Sai Phanidhar Ammiraju · Mechanical Engineer</span><span>Delray Beach, FL · Open to relocate</span></div></footer>
+</body>
+</html>
